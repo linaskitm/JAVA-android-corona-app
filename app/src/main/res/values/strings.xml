@@ -8,5 +8,6 @@
     <string name="login_login_btn">Login</string>
     <string name="login_register_btn">Register</string>
     <string name="login_invalid_credentials_message">Wrong! username or password</string>
+    <string name="set_email">Email</string>
 
 </resources>
