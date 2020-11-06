@@ -9,12 +9,12 @@
 
     <ImageView
 android:layout_width="match_parent"
-android:layout_height="255dp"
+android:layout_height="220dp"
 android:src="@drawable/logo" />
 
 <TextView
 android:layout_width="match_parent"
-android:layout_height="42dp"
+android:layout_height="wrap_content"
 android:fontFamily="casual"
 android:text="@string/app_title"
 android:textAlignment="center"
@@ -27,27 +27,29 @@ android:gravity="center_horizontal" />
 <EditText
 android:id="@+id/userName"
 android:layout_width="match_parent"
-android:layout_height="73dp"
+android:layout_height="wrap_content"
 android:textSize="15dp"
+    android:inputType="text"
+    android:autofillHints="@string/login_username"
 android:hint="@string/login_username" />
 
 <EditText
 android:id="@+id/password"
 android:layout_width="match_parent"
-android:layout_height="68dp"
+android:layout_height="wrap_content"
 android:textSize="15dp"
 android:inputType="textPassword"
 android:hint="@string/login_password" />
 
 <CheckBox
 android:layout_width="match_parent"
-android:layout_height="63dp"
+android:layout_height="wrap_content"
 android:textSize="15dp"
 android:text="@string/login_checkbox" />
 
 <Space
 android:layout_width="match_parent"
-android:layout_height="32dp" />
+android:layout_height="15dp" />
 
 <LinearLayout
 android:layout_width="match_parent"
@@ -64,7 +66,8 @@ android:weightSum="2">
     android:background="@color/colorLightPink"
     android:text="@string/login_login_btn"
     android:textSize="18dp"
-    android:layout_marginRight="5dp"/>
+    android:layout_marginRight="5dp"
+    android:padding="3dp"/>
 
 <Button
     android:id="@+id/registerBtn"
@@ -73,6 +76,7 @@ android:weightSum="2">
     android:layout_weight="1"
     android:background="@color/colorWhite"
     android:text="@string/login_register_btn"
-    android:textSize="18dp" />
+    android:textSize="18dp"
+    android:padding="3dp"/>
 </LinearLayout>
     </LinearLayout>
