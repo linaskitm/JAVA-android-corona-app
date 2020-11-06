@@ -33,8 +33,6 @@ public class LoginActivity extends AppCompatActivity {
                 userName.setError(null);
                 password.setError(null);
 
-
-
                 if(Validation.isCredentialsValid(userName2)&& Validation.isCredentialsValid(password2)) {
                     // Intention to go in search window                       from     --------->   to
                     Intent goToSearchActivity = new Intent(LoginActivity.this, SearchActivity.class);

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -15,29 +16,42 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        final EditText name1 = findViewById(R.id.setName);
-        final EditText email1 = findViewById(R.id.setEmail);
-        final EditText password1 = findViewById(R.id.setPassword);
+        final EditText setName = findViewById(R.id.setName);
+        final EditText setEmail = findViewById(R.id.setEmail);
+        final EditText setPassword = findViewById(R.id.setPassword);
 
         Button registerBtn1 = findViewById(R.id.registerBtn1);
 
         registerBtn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                 String name = name1.getText().toString();
-                 String email = email1.getText().toString();
-                 String password = password1.getText().toString();
+                 String name = setName.getText().toString();
+                 String email = setEmail.getText().toString();
+                 String password = setPassword.getText().toString();
 
-                 email1.setError(null);
+                 setEmail.setError(null);
                  // email vaidation
-                if(EmailValidation.isEmailValid(email)) {
-                    // Intention to go in search window                       from     --------->   to
+                if(!Validation.isValidEmail(email)) {
+                    setEmail.setError(getResources().getString(R.string.invalid_email));
+                    setEmail.requestFocus();
+
+                } else if (!Validation.isValidUsername(name)) {
+                    setName.setError(getResources().getString(R.string.login_invalid_credentials_message));
+                    setName.requestFocus();
+                }
+                else if (!Validation.isValidPassword(password)) {
+                    setPassword.setError(getResources().getString(R.string.login_invalid_credentials_message));
+                    setPassword.requestFocus();
+                }
+                else {
+                    // Intention to go in login window                       from     --------->   to
                     Intent goToLoginActivity = new Intent(RegisterActivity.this, LoginActivity.class);
-                    // going to search window, action.
+                    // going to login window, action.
                     startActivity(goToLoginActivity);
-                } else {
-                    email1.setError("Wrong Email");
-                    email1.requestFocus();
+
+                    Toast.makeText(RegisterActivity.this, getResources().getString(R.string.new_user),
+                            Toast.LENGTH_SHORT).show();
+
                 }
             }
         });
