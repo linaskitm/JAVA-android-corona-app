@@ -51,9 +51,17 @@ public class RegisterActivity extends AppCompatActivity {
 
                     Toast.makeText(RegisterActivity.this, getResources().getString(R.string.new_user),
                             Toast.LENGTH_SHORT).show();
+                    //konstruojamas objektas
+                    //public User(String username, String password, String email)
+                    User user=new User(name, password, email);
+                    Toast.makeText(RegisterActivity.this,
+                            "Username:"+ user.getUsername()+"\n"+
+                                    "Password:"+user.getPassword()+"\n"+
+                                    "Email:"+user.getEmail(),
+                            Toast.LENGTH_SHORT).show();
+                }
 
                 }
-            }
-        });
-    }
+            });
+        }
 }
