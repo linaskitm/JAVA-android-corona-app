@@ -42,6 +42,7 @@ android:inputType="textPassword"
 android:hint="@string/login_password" />
 
 <CheckBox
+    android:id="@+id/remember_me"
 android:layout_width="match_parent"
 android:layout_height="wrap_content"
 android:textSize="15dp"
