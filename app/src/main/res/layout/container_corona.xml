@@ -40,12 +40,22 @@
         android:textColor="@color/colorWhite" />
 
     <TextView
-        android:id="@+id/textLastUpdate"
+        android:id="@+id/xText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/textKeyId"
         android:layout_marginLeft="5dp"
-        android:text="Last Update"
+        android:text="Last Update:"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/colorGrey" />
+
+    <TextView
+        android:id="@+id/textLastUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/xText"
+        android:layout_marginLeft="5dp"
+        android:text="X"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="@color/colorGrey" />
 

@@ -39,7 +39,7 @@ public class Adapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         MyHolder myHolder = (MyHolder) holder;
         Corona current = data.get(position);
         myHolder.textKeyId.setText(current.getKeyId());
-        myHolder.textLastUpdate.setText("Last update: " + current.getLastUpdate());
+        myHolder.textLastUpdate.setText(current.getLastUpdate());
         myHolder.textConfirmed.setText("Confirmed: " + current.getConfirmed());
         myHolder.textDeaths.setText("Deaths: " + current.getDeaths());
 
