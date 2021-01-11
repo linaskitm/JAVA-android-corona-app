@@ -15,6 +15,7 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+        setTitle("Register");
 
         final EditText setName = findViewById(R.id.setName);
         final EditText setEmail = findViewById(R.id.setEmail);

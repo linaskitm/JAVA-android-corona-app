@@ -29,14 +29,12 @@
     <string name="new_entry_deaths_2000">2000</string>
     <string name="new_entry_last_update">Last Update: </string>
     <string name="new_entry_last_update_date">2020-12-21</string>
-    <string-array name="new_entry_dates_arrays">
-        <item>2020-12-21</item>
-        <item>2020-12-20</item>
-        <item>2020-12-19</item>
-        <item>2020-12-18</item>
-
-    </string-array>
+    <string name ="new_entry_date1">2020-12-21</string>
+    <string name ="new_entry_date2">2020-12-20</string>
+    <string name ="new_entry_date3">2020-12-19</string>
+    <string name ="new_entry_date4">2020-12-18</string>
     <string name="new_entry_confirm">Confirm: </string>
     <string name="new_entry_btn">Displayd selected data</string>
+    <string name="new_entry_invalid_confirmed">Wrong confirmed number</string>
 
 </resources>

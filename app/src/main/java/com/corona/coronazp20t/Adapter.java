@@ -11,12 +11,15 @@ import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.io.Serializable;
 import java.util.List;
 
 public class Adapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private Context context;
     private LayoutInflater inflater;
     List<Corona> data;
+
+    public static final String ENTRY = "com.corona.coronazp20t.ENTRY";// raktas
 
     // create constructor to initialize context and data sent from SearchActivity
     public Adapter(Context context, List<Corona> data) {
@@ -74,6 +77,9 @@ public class Adapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         public void onClick(View v) {
             // Intention to go in newEntry window                       from     --------->   to
             Intent goToNewEntryActivity = new Intent(context, NewEntryActivity.class);
+            int itemPosition = getAdapterPosition();// grazina konkrecia kortele
+            Corona corona = data.get(itemPosition);
+            goToNewEntryActivity.putExtra(ENTRY, corona);
             // going to newEntry window, action.
             context.startActivity(goToNewEntryActivity);
         }

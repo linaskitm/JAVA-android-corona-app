@@ -19,6 +19,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState); // open empty window
         setContentView(R.layout.activity_login);// load data
+        setTitle("Login");
 
         Button loginBtn = findViewById(R.id.loginBtn); // get needed elements from xml file (view file)
         Button registerBtn = findViewById(R.id.registerBtn);

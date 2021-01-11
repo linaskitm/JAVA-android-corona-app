@@ -1,14 +1,24 @@
 package com.corona.coronazp20t;
 
-public class Corona {
+import java.io.Serializable;
+
+public class Corona implements Serializable {
     private String country;
     private String lastUpdate;
     private String keyId;
     private int confirmed;
     private int deaths;
 
+    // skirtas darbui su JSON
     public Corona(String country, String lastUpdate, String keyId, int confirmed, int deaths) {
         this.country = country;
+        this.lastUpdate = lastUpdate;
+        this.keyId = keyId;
+        this.confirmed = confirmed;
+        this.deaths = deaths;
+    }
+    // skirtas atvaizdavimui duomenu is new_Entry acivity
+    public Corona(String lastUpdate, String keyId, int confirmed, int deaths) {
         this.lastUpdate = lastUpdate;
         this.keyId = keyId;
         this.confirmed = confirmed;
